@@ -1,4 +1,4 @@
-
+```
 enable
 configure terminal
 hostname CS-SW
@@ -26,3 +26,4 @@ exit
 
 end
 write memory
+```
