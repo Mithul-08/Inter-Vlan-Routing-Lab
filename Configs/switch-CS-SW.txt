@@ -1,1 +1,28 @@
 
+enable
+configure terminal
+hostname CS-SW
+
+vlan 10
+ name SALES
+vlan 20
+ name HR
+exit
+
+interface range fastEthernet0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+exit
+
+interface range fastEthernet0/3 - 4
+ switchport mode access
+ switchport access vlan 20
+exit
+
+interface gigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+exit
+
+end
+write memory
